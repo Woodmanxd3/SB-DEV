@@ -1,8 +1,9 @@
-StreamBro is a website for streaming games and other media. It allows you to broadcast your gameplay or media content to various people. We are made for the community, by the community.
+StreamBro is a website for streaming games and other media. It allows you to broadcast your gameplay or media content to various people. We are made for the community.
 
 This Repository is for the website!
 
 Things to do:
+Get the website fully designed / prototyped
 Get User Authentication working with a login page
 Setup an email server for forgotten passwords etc…
 Sanitize the code for the website so it has input validation
