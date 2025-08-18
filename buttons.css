@@ -1,0 +1,15 @@
+.brownbutton {
+  background-color: rgb(96, 71, 45);
+  border: none;
+  color: tan;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.brownbutton:hover {
+  background-color: rgb(120, 90, 60);
+}
