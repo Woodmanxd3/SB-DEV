@@ -2,3 +2,6 @@ body {
     background-color: tan;
     color: rgb(96, 71, 45)
 }
+.centeredtext{
+    text-align: center; display: block;
+}
