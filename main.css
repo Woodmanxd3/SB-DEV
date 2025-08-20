@@ -5,3 +5,39 @@ body {
 .centeredtext{
     text-align: center; display: block;
 }
+.navbarul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: rgb(96, 71, 45);
+    color: tan;
+    padding: 5px 8px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.navbar {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: rgb(96, 71, 45);
+    color: tan;
+    padding: 5px 8px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+/*When hovered, change color slightly*/
+.navbar:hover {
+    background-color: rgb(120, 90, 60);
+}
