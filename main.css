@@ -89,7 +89,7 @@ be easily modified */
   }
 
   #nav-buttons {
-    flex-direction: column; /* stack buttons vertically */
+    flex-direction: center; /* stack buttons horizontally, but with 1 on top*/
     width: 100%;
     align-items: center;
     margin-top: 10px;
@@ -100,8 +100,8 @@ be easily modified */
     
   }
   #logo {
-    flex-direction: column; /* stack buttons vertically */
-    width: 95%;
+    flex-direction: column; /* stack the button on top of the other two */
+    width: 100%;
     align-items: center;
     margin-top: 1px;
 }
