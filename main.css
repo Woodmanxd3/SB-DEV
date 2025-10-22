@@ -1,43 +1,107 @@
+/* Main CSS for StreamBro website */
+/* Background Page Color for StreamBro */
+/*The style of this page is inspired by
+Frutiger Aero color scheme with a bit of
+brown / beige and a glassy look*/
+
+/*If your a nerd like me, you probably can see this*/
+
 body {
-    background-color: tan;
-    color: rgb(96, 71, 45)
+  background: rgb(135, 112, 79) 0%;
 }
-.centeredtext{
-    text-align: center; display: block;
+/* Navbar container */
+/*Changes the whole navigation bar appearance*/
+#navbar1 {
+  background: linear-gradient(to bottom, rgb(160, 136, 112) 0%, rgb(137, 111, 81) 50%, rgb(160, 136, 112) 100%);
+    /* Frutiger Aero box shadow */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1), 0 0 15px rgba(255,255,255,0.2) inset;
+  transition: background 0.3s, transform 0.2s;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* logo left, buttons right */
+  padding: 10px 20px;
+  border-radius: 5px; /* Happy and round! */
 }
-.navbarul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    background-color: rgb(96, 71, 45);
-    color: tan;
-    padding: 7px 7px;
+
+/* Logo button */
+/* Changes the logo button appearance. */
+/* This is so the element in the future can
+be easily modified */
+#logo {
+  background: linear-gradient(to bottom, rgb(160, 136, 112) 0%, rgb(140, 120, 96) 50%, rgb(160, 136, 112) 100%);
+  /* Frutiger Aero box shadow */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1), 0 0 15px rgba(255,255,255,0.2) inset;
+  transition: background 0.3s, transform 0.2s;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: medium;
+}
+
+/* Buttons container */
+/* Flexbox for horizontal layout */
+#nav-buttons {
+  display: flex;
+  gap: 10px; /* space between buttons */
+}
+
+/* Individual buttons */
+/* This changes all buttons with this class to this styling */
+/* Has a very glassy look inspired by Frutiger Aero design */
+.navbtn1 {
+  background: linear-gradient(to bottom, rgb(160, 136, 112) 0%, rgb(140, 120, 96) 50%, rgb(160, 136, 112) 100%);
+  /* Frutiger Aero box shadow */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1), 0 0 15px rgba(255,255,255,0.2) inset;
+  transition: background 0.3s, transform 0.2s;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: medium;
+}
+/* Hover effects for buttons */
+.navbtn1:hover {
+  background: linear-gradient(to bottom, rgb(160, 136, 112) 0%, rgb(170, 147, 118) 50%, rgb(160, 136, 112) 100%);
+}
+/* At the moment these are basically the same */
+#logo:hover {
+  background: linear-gradient(to bottom, rgb(160, 136, 112) 0%, rgb(170, 147, 118) 50%, rgb(160, 136, 112) 100%);
+}
+/* Copyright Element */
+#copyright{
+  color: rgb(197, 176, 164);
+  text-align: center;
+  margin-top: 20px;
+  font-size: small;
+}
+
+
+/* Changes the layout for small screens */
+/* Responsive: stack navbar items on small screens */
+@media (max-width: 410px) {
+  #navbar1 {
+    flex-direction: column; /* stack logo & buttons */
+    align-items: center;
+  }
+
+  #nav-buttons {
+    flex-direction: column; /* stack buttons vertically */
+    width: 100%;
+    align-items: center;
+    margin-top: 10px;
+  }
+  .navbtn1 {
+    width: 95%;
     text-align: center;
-    text-decoration: none;
-    font-size: 20px;
-    cursor: pointer;
-    border-radius: 10px;
-}
-.navbar {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    background-color: rgb(96, 71, 45);
-    color: tan;
-    padding: 14px 18px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 20px;
-    cursor: pointer;
-    border-radius: 10px;
-}
-/*When hovered, change color slightly*/
-.navbar:hover {
-    background-color: rgb(120, 90, 60);
+    
+  }
+  #logo {
+    flex-direction: column; /* stack buttons vertically */
+    width: 95%;
+    align-items: center;
+    margin-top: 1px;
 }
