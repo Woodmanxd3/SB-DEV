@@ -1,43 +1,193 @@
+/* Main CSS for StreamBro website */
+/* Background Page Color for StreamBro */
+/*The style of this page is inspired by
+Frutiger Aero color scheme with a bit of
+brown / beige and a glassy look*/
+
+/*If your a nerd like me, you probably can see this*/
+
+/* Background Page Color for StreamBro */
 body {
-    background-color: tan;
-    color: rgb(96, 71, 45)
+  background: rgb(135, 112, 79) 0%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.centeredtext{
-    text-align: center; display: block;
+/* Navbar container */
+/*Changes the whole navigation bar appearance*/
+#navbar1 {
+  background: rgba(199, 193, 193, 0.1); /* semi-transparent background */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1), 0 0 15px rgba(255,255,255,0.2) inset;
+  transition: background 0.3s, transform 0.2s;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* logo left, buttons right */
+  padding: 10px 20px;
+  border-radius: 5px; /* Happy and round! */
 }
-.navbarul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    background-color: rgb(96, 71, 45);
-    color: tan;
-    padding: 7px 7px;
+/* Logo button */
+/* Changes the logo button appearance. */
+/* This is so the element in the future can
+be easily modified */
+#logo {
+  background: rgba(255, 255, 255, 0.1); /* semi-transparent background */
+  /* Frutiger Aero box shadow */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1), 0 0 15px rgba(255,255,255,0.2) inset;
+  transition: background 0.3s, transform 0.2s;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: large;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* Buttons container */
+/* Flexbox for horizontal layout */
+#nav-buttons {
+  display: flex;
+  gap: 10px; /* space between buttons */
+}
+/* Individual buttons */
+/* This changes all buttons with this class to this styling */
+/* Has a very glassy look inspired by Frutiger Aero design */
+.navbtn1 {
+  background: rgba(255, 255, 255, 0.1); /* semi-transparent background */
+  /* Frutiger Aero box shadow */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1), 0 0 15px rgba(255,255,255,0.2) inset;
+  transition: background 0.3s, transform 0.2s;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: medium;
+  font-weight: bold;
+}
+/* Hover effects for buttons */
+.navbtn1:hover {
+  background: linear-gradient(to bottom, rgb(160, 136, 112) 0%, rgb(170, 147, 118) 50%, rgb(160, 136, 112) 100%);
+}
+/* At the moment these are basically the same */
+#logo:hover {
+  background: rgba(255, 255, 255, 0.1); /* semi-transparent background */
+}
+/* Video Container */
+/* This is the main video container styling */
+.videocontainer {
+  margin: 10px;
+  box-sizing: border-box;
+  padding: 10px;
+  width: 290px;
+  height: auto; /* Allow height to adjust based on content */
+  background: rgba(255, 255, 255, 0.1); /* semi-transparent background */
+  border: 2px solid rgba(255, 255, 255, 0.2); /* light border */
+  border-radius: 10px; /* rounded corners */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1), 0 0 15px rgba(255,255,255,0.2) inset; /* Frutiger Aero box shadow */
+  transition: transform 0.2s, box-shadow 0.2s; /* Smooth hover effect */
+}
+.videocontainer:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15), 0 0 15px rgba(255,255,255,0.2) inset;
+}
+/* Thumbnail Image */
+.thumbnail {
+  width: 100%;
+  height: 163px; /* 16:9 aspect ratio */
+  border-radius: 8px;
+  object-fit: cover; /* Maintain aspect ratio */
+  margin-bottom: 10px;
+}
+/* Video details section */
+.video-details {
+  display: grid;
+  grid-template-columns: auto 1fr; /* Profile pic + info */
+  gap: 10px;
+  padding: 0 5px;
+}
+/* Channel profile picture */
+.channel-profile {
+  width: 45px;
+  height: 45px;
+  border-radius: 10%;
+  overflow: hidden;
+  flex-shrink: 0; /* Prevent shrinking */
+}
+.channel-profile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* Video info section */
+.video-info {
+  flex-grow: 1; /* Take remaining space */
+  min-width: 0; /* Allow text truncation */
+}
+/* Video grid container
+   Use flexbox with wrapping so items pack to the left and keep consistent spacing
+   This avoids large gaps when the viewport is wider than the sum of item widths. */
+.video-grid {
+  display: flex;             /* use flex so items naturally pack left */
+  flex-wrap: wrap;           /* allow wrapping */
+  gap: 12px 12px;            /* vertical horizontal gap */
+  padding: 12px 16px;
+  width: 100%;               /* take full width of container */
+  max-width: 100%;           /* don't exceed viewport */
+  box-sizing: border-box;
+  justify-content: center;   /* center items horizontally */
+  align-items: flex-start;   /* align items to top */
+  margin: 0 auto;           /* center the grid container itself */
+}
+/* Ensure video containers have a fixed flex basis so they stay close together */
+.videocontainer {
+  flex: 0 0 290px;           /* fixed width, no grow/shrink */
+  width: 290px;
+  box-sizing: border-box;
+  margin: 0;
+}
+#videotitle, .video-title {
+  color: white;
+  font-size: 14px;
+  margin: 0;
+  line-height: 1.4;
+  /* Allow text to wrap but limit to 2 lines */
+  display: -webkit-box;
+  display: box;
+  -webkit-line-clamp: 2;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+}
+#copyright{
+  color: white;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 20px;
+}
+/* Changes the layout for small screens */
+/* Responsive: stack navbar items on small screens */
+@media (max-width: 410px) {
+  #navbar1 {
+    flex-direction: column; /* stack logo & buttons */
+    align-items: center;
+  }
+  #nav-buttons {
+    flex-direction: center; /* stack buttons horizontally, but with 1 on top*/
+    width: 100%;
+    align-items: center;
+    margin-top: 10px;
+  }
+  .navbtn1 {
+    width: 95%;
     text-align: center;
-    text-decoration: none;
-    font-size: 20px;
-    cursor: pointer;
-    border-radius: 10px;
-}
-.navbar {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    background-color: rgb(96, 71, 45);
-    color: tan;
-    padding: 14px 18px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 20px;
-    cursor: pointer;
-    border-radius: 10px;
-}
-/*When hovered, change color slightly*/
-.navbar:hover {
-    background-color: rgb(120, 90, 60);
+  }
+  #logo {
+    flex-direction: column; /* stack the button on top of the other two */
+    width: 100%;
+    align-items: center;
+    margin-top: 1px;
+  }
 }
