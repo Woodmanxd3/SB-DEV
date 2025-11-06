@@ -9,6 +9,7 @@ brown / beige and a glassy look*/
 /* Background Page Color for StreamBro */
 body {
   background: rgb(135, 112, 79) 0%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 /* Navbar container */
 /*Changes the whole navigation bar appearance*/
@@ -38,6 +39,7 @@ be easily modified */
   border-radius: 5px;
   cursor: pointer;
   font-size: medium;
+  font-weight: bold;
 }
 /* Buttons container */
 /* Flexbox for horizontal layout */
@@ -59,6 +61,7 @@ be easily modified */
   border-radius: 5px;
   cursor: pointer;
   font-size: medium;
+  font-weight: bold;
 }
 /* Hover effects for buttons */
 .navbtn1:hover {
