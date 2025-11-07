@@ -20,7 +20,7 @@ body {
   font-weight: bold;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-#registerh1 {
+.FormTitle {
   color: white;
   text-align: center;
 }
