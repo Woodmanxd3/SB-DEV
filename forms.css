@@ -52,8 +52,14 @@ body {
     font-size: medium;
     font-weight: bold;
 }
+#Login:hover {
+  background: linear-gradient(to bottom, rgb(160, 136, 112) 0%, rgb(170, 147, 118) 50%, rgb(160, 136, 112) 100%);
+}
 #Register {
     font-weight: bold;
+}
+#Register:hover {
+  background: linear-gradient(to bottom, rgb(160, 136, 112) 0%, rgb(170, 147, 118) 50%, rgb(160, 136, 112) 100%);
 }
 .Formbuttons {
   color: white;
